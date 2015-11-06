@@ -28,4 +28,4 @@
 //     "Thank you for voting! Puppies have 12 total votes so far."
 
 
-// Listen on port 8080 for Cloud9
+// Have the Express application listen for incoming requests on port 8080
