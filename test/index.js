@@ -2,22 +2,22 @@
 // run 'node test' to run the tests that follow.
 
 
-// Define the Counter function
+// Counter constructor function
 function Counter() {
-    // Create a property on the `this` reference 
+    // Create a property on the `this` reference to store counts for each key
 }
 
-// Increment the count value for `key`
+// .record(key) - increment the count value for `key`
 Counter.prototype.record = function(key) {
 
 };
 
-// Retrieve the total recorded counts for `key`
+// .retrieve(key) - retrieve the total recorded counts for `key`
 Counter.prototype.retrieve = function(key) {
 
 };
 
-// Return a new object containing the results thus far
+// .results() - return an object containing the cumulative counts for all keys
 Counter.prototype.results = function() {
     
 };
