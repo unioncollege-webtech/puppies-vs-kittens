@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/unioncollege-webtech/puppies-vs-kittens/issues"
   },
-  "homepage": "https://github.com/unioncollege-webtech/puppies-vs-kittens"
+  "homepage": "https://github.com/unioncollege-webtech/puppies-vs-kittens",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }
