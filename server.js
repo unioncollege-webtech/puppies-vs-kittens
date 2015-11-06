@@ -1,36 +1,31 @@
-// Require the Express module
-// https://npmjs.com/package/express
-var express = require('express');
-
-// Create a new application instance
-var app = express();
-
-// Use Express's built-in static file server
-app.use(express.static('public'));
+// Require the Express module (https://npmjs.com/package/express)
 
 
-// TODO: Create a Counter constructor function that allows you to record votes
-//       for puppies and kittens.
-//
-//       You will use this like so:
-//       var counter = new Counter();
-//
-//       // Then, in your route to record votes for kittens:
-//       counter.record('kittens');
-//
-//       // Votes for puppies
-//       counter.record('puppies');
-//
-//       // Then retrieve the value like:
-//       counter.retrieve('kittens');
-//       counter.retrieve('puppies');
+// Create a new express application instance by calling `express()`
 
 
-// TODO: Respond to /kittens and /puppies requests.
+// Serve files in the 'public' directory with Express's built-in static file server
+
+
+// Create a Counter class that will be used to create counter objects
+// See the full description in README.md
+
+
+// Create a new Counter instance, like: `var voteCounter = new Counter()`
+
+
+// Respond to 'get' requests for the route '/kittens'
+// - Record a vote for 'kittens'
+// - Retrieve the new cumulative votes for 'kittens'
+// - Respond with with the message:
+//     "Thank you for voting! Kittens have 12 total votes so far."
+
+
+// Respond to 'get' requests for the route '/puppies'
+// - Record a vote for 'puppies'
+// - Retrieve the new cumulative votes for 'puppies'
+// - Respond with with the message:
+//     "Thank you for voting! Puppies have 12 total votes so far."
+
 
 // Listen on port 8080 for Cloud9
-// https://docs.c9.io/docs/run-an-application#section-environment-variables
-app.listen(8080);
-
-// Log a message to the console.
-console.log("Server is up!");
