@@ -60,3 +60,5 @@ app.get('/puppies', function(req, res){
 
 // Have the Express application listen for incoming requests on port 8080
 app.listen(8080);
+
+console.log("server up!");
