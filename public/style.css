@@ -1,3 +1,30 @@
-h1 {
+.puppies {
+    font-family: 'Schoolbell', cursive;
+    font-size: 100px;
+}
+
+.kittens {
+    font-family: 'Crafty Girls', cursive;
+    font-size: 100px;
+}
+
+.textBox {
     text-align: center;
+}
+
+.innerBox {
+    font-size: 30px;
+}
+
+.picBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 770px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    border-radius: 15px 15px 15px 15px;
 }
