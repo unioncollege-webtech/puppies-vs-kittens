@@ -1,0 +1,41 @@
+.puppies {
+    font-family: 'Schoolbell', cursive;
+    font-size: 100px;
+}
+
+.kittens {
+    font-family: 'Crafty Girls', cursive;
+    font-size: 100px;
+}
+
+.textBox {
+    text-align: center;
+    background:#7f7f7f;
+    background:rgba(255,255,255,0.75);
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 20px;
+    padding-top: 1px;
+    border-radius: 15px 15px 15px 15px;
+    border: 3px solid black;
+}
+
+.innerBox {
+    font-size: 30px;
+    padding-bottom: 1px;
+}
+
+.picBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+img {
+    border-radius: 15px 15px 15px 15px;
+    border: 3px solid black;
+}
