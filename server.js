@@ -5,7 +5,7 @@ var express = require("express");
 var app = express();
 
 // Serve files in the 'public' directory with Express's built-in static file server
-app.use(express.static('/public'));
+app.use(express.static('public'));
 
 // Create a Counter class that will be used to create counter objects
 // See the full description in README.md
@@ -42,12 +42,12 @@ var voteCounter = new Counter();
 // - Respond with with the message:
 //     "Thank you for voting! Kittens have 12 total votes so far."
 app.get('/kittens', function(req, res){
-    voteCounter.record();
+    voteCounter.record("kittens");
     res.send("Thank you fro voting! Kittens have " + voteCounter.retrieve('kittens')); 
 });
 
 app.get('/puppies', function(req, res){
-    voteCounter.record();
+    voteCounter.record('puppies');
     res.send("Thank you fro voting! Puppies have " + voteCounter.retrieve('puppies')); 
 });
 
