@@ -9,15 +9,38 @@ app.use(express.static('public'));
 
 // Create a Counter class that will be used to create counter objects
 // See the full description in README.md
-var counter = 0;
 
-// function counter(){
-    
-// }
+function Count(){
+    this.haveVotes = {
+        puppies: 0,
+        kittens: 0
+    };
+}
+
+Count.prototype.record = function(key){
+    this.haveVotes[key]++;
+};
+
+Count.prototype.retrieve = function(key){
+    return this.haveVotes[key];
+};
+
+Count.prototype.results = function(key){
+    return this.haveVotes;
+};
+
+var countVotes = new Count();
+
 app.get('/puppies', function(req, res){
-    counter++;
-   res.send('Thank you for voting! Puppies have ' + counter + ' total votes so far.'); 
+    countVotes.record('puppies');
+    res.send('Thank you for voting! Puppies have ' + countVotes.retrieve('puppies') + ' total votes so far.'); 
 });
+
+app.get('/kittens', function(req, res){
+    countVotes.record('kittens');
+    res.send('Thank you for voting! Kittens have ' + countVotes.retrieve('kittens') + ' total votes so far.'); 
+});
+
 
 // Create a new Counter instance, like: `var voteCounter = new Counter()`
 
