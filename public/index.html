@@ -2,17 +2,24 @@
 <html>
 
 <head>
-    <title>Puppies vs. Kittens!</title>
-    <link rel="stylesheet" href="/style.css">
-    <meta name="viewport" content="width=device-width">
+  <title>Puppies vs. Kittens!</title>
+  <link rel="stylesheet" href="/style.css">
+  <meta name="viewport" content="width=device-width">
 </head>
 
 <body>
+  <div class="container">
     <h1>Puppies vs. Kittens</h1>
     <p>Cast your vote for the cuter creature: puppies or kittens:</p>
-    <p>
-        <!-- Include links to '/puppies' and '/kittens' here -->
-    </p>
+    <div class="voteButtonWrap">
+        <form class="voteButton" action="/kittens" method="get">
+          <button>Kittens!</button>
+        </form>
+        <form class="voteButton" action="/puppies" method="get">
+          <button>Puppies!</button>
+        </form>
+    </div>
+  </div>`
 </body>
 
 </html>
