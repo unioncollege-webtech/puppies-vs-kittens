@@ -1,0 +1,32 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    height: 100%;
+    background: #eeeeee; /* Old browsers */
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+* {
+    box-sizing: 'border-box';
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #5c9ced;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #8ab8f2;
+}
