@@ -5,6 +5,9 @@
     <title>Puppies vs. Kittens!</title>
     <link rel="stylesheet" href="/styles.css">
     <meta name="viewport" content="width=device-width">
+    <script src="/dist/socket.io.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="./js.js"></script>
 </head>
 
 <body>
@@ -20,6 +23,10 @@
         <span id='puppiesButton' class='voteButton'>PUPPIES!</span>
         <span id='kittensButton' class='voteButton'>KITTENS!</span>
       </div>
+    </div>
+    <div id='score'>
+      <h2>Puppies: <span id='puppyScore'>0</span></h2>
+      <h2>Kittens: <span id='kittenScore'>0</span></h2>
     </div>
   </main>
 </body>
