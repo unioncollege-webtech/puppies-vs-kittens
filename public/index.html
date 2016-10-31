@@ -3,16 +3,32 @@
 
 <head>
     <title>Puppies vs. Kittens!</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styles.css">
     <meta name="viewport" content="width=device-width">
+    <script src="/dist/socket.io.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="./js.js"></script>
 </head>
 
 <body>
-    <h1>Puppies vs. Kittens</h1>
-    <p>Cast your vote for the cuter creature: puppies or kittens:</p>
-    <p>
-        <!-- Include links to '/puppies' and '/kittens' here -->
-    </p>
+  <main>
+    <div id='headingStuff'>
+      <h1>Puppies vs. Kittens</h1>
+      <p>Cast your vote for the cuter creature: puppies or kittens:</p>
+    </div>
+    <div id='voteBox'>
+      <p>Place your votes on which are best: puppies or kittens!</p>
+      <!-- Include links to '/puppies' and '/kittens' here -->
+      <div id='buttonContainer'>
+        <span id='puppiesButton' class='voteButton'>PUPPIES!</span>
+        <span id='kittensButton' class='voteButton'>KITTENS!</span>
+      </div>
+    </div>
+    <div id='score'>
+      <h2>Puppies: <span id='puppyScore'>0</span></h2>
+      <h2>Kittens: <span id='kittenScore'>0</span></h2>
+    </div>
+  </main>
 </body>
 
 </html>

@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/unioncollege-webtech/puppies-vs-kittens",
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "socket.io": "^1.5.1"
   }
 }

@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #417e1e;
+}
+
+main {
+  box-shadow: inset 12px 0 15px -4px rgba(65,126,30,1), inset -12px 0 8px -4px rgba(65,126,30,1);
+	-moz-box-shadow: inset 12px 0 15px -4px rgba(65,126,30,1), inset -12px 0 8px -4px rgba(65,126,30,1);
+	-webkit-box-shadow: inset 12px 0 15px -4px rgba(65,126,30,1), inset -12px 0 8px -4px rgba(65,126,30,1);
+	-o-box-shadow: inset 12px 0 15px -4px rgba(65,126,30,1), inset -12px 0 8px -4px rgba(65,126,30,1);
+  background-color: #58ab29;
+  color: #242424;
+  padding: 2em;
+  font-family: Verdana;
+  font-size: 14px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 55%;
+}
+
+#headingStuff {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#voteBox {
+  display: flex;
+  margin-top: 1em;
+  -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.35);
+  -moz-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.35);
+  box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.35);
+  width: 70%;
+  height: 20%;
+  background-color: #dedede;
+  border: 3px solid #58ab29;
+  border-radius: 1em;
+  justify-content: space-around;
+  text-align: center;
+  flex-direction: column;
+}
+
+#buttonContainer {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  justify-content: space-around;
+  -webkit-touch-callout: none; /* iOS Safari */
+-webkit-user-select: none;   /* Chrome/Safari/Opera */
+-khtml-user-select: none;    /* Konqueror */
+-moz-user-select: none;      /* Firefox */
+-ms-user-select: none;       /* Internet Explorer/Edge */
+user-select: none;    
+}
+
+.voteButton {
+  width: 40%;
+  height: 90%;
+  border: 3px solid #dedede;
+  border-radius: 1em;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+#puppiesButton {
+  display: flex;
+  background-color: red;
+}
+
+#puppiesButton:hover {
+  background-color: green;
+  cursor: pointer;
+}
+
+#kittensButton {
+  display: flex;
+  background-color: blue;
+}
+
+#kittensButton:hover {
+  background-color: green;
+  cursor: pointer;
+}
