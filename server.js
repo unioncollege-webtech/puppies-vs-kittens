@@ -12,18 +12,18 @@ app.use(express.static('public'));
 
 // Create a Counter class that will be used to create counter objects
 // See the full description in README.md
-var ScoreCounter = require('./counter.js');
+var Counter = require('./counter.js');
 
 // Create a new Counter instance, like: `var ScoreCounter = new Counter()`
-var ScoreCounter = new ScoreCounter();
+var ScoreCounter = new Counter();
 
 //Main page
 //IO
 io.on('connection', function (socket) {
-  io.emit('score', {puppy: ScoreCounter.retrieve('kittens'),
-                    kitten: ScoreCounter.retrieve('puppies')});
+  io.emit('score', {puppy: ScoreCounter.retrieve('puppies'),
+                    kitten: ScoreCounter.retrieve('kittens')});
   socket.on('vote', function (data) {
-    console.log('New connection from: ' + socket.request.connection.remoteAddress);
+    console.log('Vote received from: ' + socket.request.connection.remoteAddress);
     /** Here would be the code to check if we know this IP and it has already voted if I wanted.
      * I decided to not do that since running it from localhost means that I would have a hard time
      * voting more than once... **/
