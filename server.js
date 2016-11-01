@@ -1,31 +1,48 @@
+//http://www.bestcssbuttongenerator.com/#/3 for my cool looking css buttons.
+
 // Require the Express module (https://npmjs.com/package/express)
+var express = require('express');
 
 
 // Create a new express application instance by calling `express()`
-
+var app = express();
 
 // Serve files in the 'public' directory with Express's built-in static file server
+app.use(express.static('public'));
 
 
-// Create a Counter class that will be used to create counter objects
-// See the full description in README.md
+function Counter() {
+    this.animal = {
+    };
+}
+Counter.prototype.record = function(key) {
+    if(!(key in this.animal)) {
+        this.animal[key] = 0;
+    }
+    else {
+    this.animal[key]++;
+}
+};
+Counter.prototype.retrieve = function(key) {
+     if(!(key in this.animal)) {
+        this.animal[key] = 0;
+    }
+    return this.animal[key];
+};
+
+var voteCounter = new Counter();
 
 
-// Create a new Counter instance, like: `var voteCounter = new Counter()`
+app.post('/kittens', function (req, res) {
+    voteCounter.record('kittens');
+    res.send("Thank you for voting! Kittens have " + voteCounter.retrieve('kittens') + " votes so far!");
+});
 
 
-// Respond to 'get' requests for the route '/kittens'
-// - Record a vote for 'kittens'
-// - Retrieve the new cumulative votes for 'kittens'
-// - Respond with with the message:
-//     "Thank you for voting! Kittens have 12 total votes so far."
+app.post('/puppies', function (req, res) {
+    voteCounter.record('puppies');
+    res.send("Thank you for voting! Puppies have " + voteCounter.retrieve('puppies') + " votes so far!");
+});
 
 
-// Respond to 'get' requests for the route '/puppies'
-// - Record a vote for 'puppies'
-// - Retrieve the new cumulative votes for 'puppies'
-// - Respond with with the message:
-//     "Thank you for voting! Puppies have 12 total votes so far."
-
-
-// Have the Express application listen for incoming requests on port 8080
+app.listen(8080);
