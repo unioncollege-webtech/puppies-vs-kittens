@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+    font-size: 100;
+    color: yellow;
+    }    
+    
+p {
+    text-align: center;
+   font-size: 1000;
+}
+
+body {
+    background-image:url(" https://i.ytimg.com/vi/4nmk477nUGQ/maxresdefault.jpg");
+    }
+    
+a {
+    color: red ;
+    
+}
