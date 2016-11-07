@@ -11,11 +11,13 @@
     <h1>Puppies vs. Kittens</h1>
     <p>Cast your vote for the cuter creature: puppies or kittens:</p>
     <p>
-        <a href="/kittens">Vote Kittens!</a>
-        <a href="/puppies">Vote Puppies!</a>
-        <p></p>
-        <img src="./kittens.jpg" style="width: 400px">
-        <img src="./puppies.jpg" style="width: 400px">
+        <form method='POST' action='/vote'>
+            <button type = 'submit' name='choice' value="kittens">Vote Kittens!</button>
+            <button type = 'submit' name='choice' value="puppies">Vote Puppies!</button>
+            <p></p>
+            <img src="./kittens.jpg" style="width: 400px">
+            <img src="./puppies.jpg" style="width: 400px">
+        </form>
     </p>
 </body>
 
