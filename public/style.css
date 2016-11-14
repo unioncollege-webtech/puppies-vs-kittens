@@ -1,0 +1,20 @@
+button {
+    background-color: #aaafff;
+    color: white;
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-family: cursive;
+    display: inline-block;
+}
+
+
+a:hover, a:active {
+    background-color: #bbbbff;
+}
+img {
+    display: inline-block;
+}
