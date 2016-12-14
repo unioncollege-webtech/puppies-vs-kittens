@@ -1,31 +1,50 @@
-// Require the Express module (https://npmjs.com/package/express)
+var express = require('express');
 
+// Create a new application instance
+var app = express();
 
-// Create a new express application instance by calling `express()`
+// Use Express's built-in static file server
+app.use(express.static('public'));
 
+//Count Class
 
-// Serve files in the 'public' directory with Express's built-in static file server
+function Count(){
+      this.haveVotes = {
+         kittens: 0,
+         puppies: 0
+      };
+}
 
+Count.prototype.record = function(key){
+   this.haveVotes[key]++;
+};
 
-// Create a Counter class that will be used to create counter objects
-// See the full description in README.md
+Count.prototype.retrieve = function(key){
+   return this.haveVotes[key]++;
+};
 
+Count.prototype.results = function(key){
+   return this.haveVotes;
+};
+// Create a counter instance
 
-// Create a new Counter instance, like: `var voteCounter = new Counter()`
+var ScoreCounter = new Count();
 
+// Also respond to `GET` requests at the path '/hi'
+app.get('/kittens', function(req, res){
+   ScoreCounter.record('kittens');
+   res.send('Thanks for voting for kittens! Kittens have ' + ScoreCounter.retrieve('kittens') + ' total votes so far.'); 
+});
 
-// Respond to 'get' requests for the route '/kittens'
-// - Record a vote for 'kittens'
-// - Retrieve the new cumulative votes for 'kittens'
-// - Respond with with the message:
-//     "Thank you for voting! Kittens have 12 total votes so far."
+// Also respond to `GET` requests at the path '/hi'
+app.get('/puppies', function(req, res){
+   ScoreCounter.record('puppies');
+   res.send('Thanks for voting for puppies ! Puppies have ' + ScoreCounter.retrieve('puppies') + ' total votes so far.'); 
+});
 
+// Listen on port 8080 for Cloud9
+// https://docs.c9.io/docs/run-an-application#section-environment-variables
+app.listen(8080);
 
-// Respond to 'get' requests for the route '/puppies'
-// - Record a vote for 'puppies'
-// - Retrieve the new cumulative votes for 'puppies'
-// - Respond with with the message:
-//     "Thank you for voting! Puppies have 12 total votes so far."
-
-
-// Have the Express application listen for incoming requests on port 8080
+//Log a message to the console.
+console.log("Server is up!");
